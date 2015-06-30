@@ -1,0 +1,7 @@
+Contributions:
+
+Server/Multi Client Connection Application
+Camera Detection
+Obsticle Avoidance Algorithem
+Mapping Software
+Raspberry Pi Configuration and Setup

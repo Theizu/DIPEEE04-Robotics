@@ -1,0 +1,29 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(25,GPIO.OUT)  // brown S2 p
+GPIO.setup(24,GPIO.OUT)  // white S1 q
+p=GPIO.PWM(25,50)  
+q=GPIO.PWM(24,50)
+p.start(50)
+q.start(50)
+p.ChangeDutyCycle(60)
+q.ChangeDutyCycle(60)
+
+
+p.ChangeDutyCycle(77)  2.5v    100 - 3.3v
+p.ChangeFrequency(100)   
+p.stop
+GPIO.cleanup()
+
+s1q  s2p
+ 0    80     Right
+80    0      Reverse
+80    80     Stop
+100   78     Left
+78    100    Front
+
+x4 Sensitivity
+78    0       Reverse
+100   68      Front
+
